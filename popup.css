@@ -1,0 +1,158 @@
+.container {
+  font-family: Helvetica;
+  width: 320px;
+  padding: 8px 8px;
+  color: #313a4d;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.header img {
+  width: 22px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.header img:hover {
+  background-color: #f7fafa;
+}
+
+/* Button */
+
+.summaryGeneratorBtn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 24px;
+  background-color: #fff;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 8px 32px 8px 32px;
+}
+
+.summaryGeneratorBtn:hover {
+  background-color: #f7fafa;
+}
+
+.summaryGeneratorBtn:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, 0.5) 0 2px 5px 0;
+  outline: 0;
+}
+
+.summaryGeneratorBtn-content {
+  display: flex;
+  align-items: center;
+}
+
+.summaryGeneratorBtn-content img {
+  width: 14px;
+  width: 14px;
+  margin-right: 4px;
+}
+
+/* Paragrapsh */
+.summaryParagraph {
+  display: none;
+  margin-top: 36px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #f7fafa;
+}
+
+/* Loading Animation */
+
+.loadingAnimation {
+  display: none;
+  margin: 0px auto;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.loadingAnimation div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 0 0,
+    #1ba1e3,
+    #1ba1e3 0%,
+    #5489d6 30%,
+    #9b72cb 54.6%,
+    #d96570 82.5%,
+    #f49c46 100%
+  );
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.loadingAnimation div:nth-child(1) {
+  left: 8px;
+  animation: loadingAnimation1 0.6s infinite;
+}
+
+.loadingAnimation div:nth-child(2) {
+  left: 8px;
+  animation: loadingAnimation2 0.6s infinite;
+}
+
+.loadingAnimation div:nth-child(3) {
+  left: 32px;
+  animation: loadingAnimation2 0.6s infinite;
+}
+
+.loadingAnimation div:nth-child(4) {
+  left: 56px;
+  animation: loadingAnimation3 0.6s infinite;
+}
+
+@keyframes loadingAnimation1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loadingAnimation3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes loadingAnimation2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+/* Common */
+
+.show {
+  display: block;
+}
